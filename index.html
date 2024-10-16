@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIT Document Merger</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sub-box">
+            <h1>Document Merger Tool</h1>
+            <p>Select two PDF documents to merge them into one.</p>
+
+            <div class="upload-section">
+                <label for="doc1">Upload Document 1:</label>
+                <input type="file" id="doc1" accept=".pdf">
+            </div>
+
+            <div class="upload-section">
+                <label for="doc2">Upload Document 2:</label>
+                <input type="file" id="doc2" accept=".pdf">
+            </div>
+
+            <button id="merge-btn" onclick="mergeDocuments()">Merge Documents</button>
+
+            <div id="pdf-section" style="margin-top: 20px;">
+                <h2>Merged PDF</h2>
+                <iframe id="pdf-viewer" style="width:100%; max-height: 400px;height:300px;" frameborder="0"></iframe>
+            </div>
+
+            <button id="download-btn" style="display:none;" onclick="downloadMerged()">Download Merged Document (PDF)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
